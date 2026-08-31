@@ -1,0 +1,69 @@
+filters:
+  and:
+    - file.inFolder("论文库")
+    - type == "source"
+properties:
+  file.name:
+    displayName: 论文
+  research_direction:
+    displayName: 研究方向
+  research_type:
+    displayName: 类型
+  venue:
+    displayName: 发表场所
+  publication_date:
+    displayName: 年份
+  status:
+    displayName: 阅读状态
+  local_pdf:
+    displayName: 原文
+  translation_pdf:
+    displayName: 译文
+  code_url:
+    displayName: 代码
+views:
+  - type: table
+    name: 全部论文
+    groupBy:
+      property: research_direction
+      direction: ASC
+    order:
+      - file.name
+      - research_type
+      - venue
+      - publication_date
+      - status
+      - local_pdf
+      - translation_pdf
+      - code_url
+  - type: table
+    name: 当前在读
+    filters:
+      and:
+        - status == "reading"
+    order:
+      - file.name
+      - research_direction
+      - local_pdf
+      - translation_pdf
+  - type: table
+    name: 原文与译文
+    filters:
+      and:
+        - local_pdf != null
+    order:
+      - file.name
+      - research_direction
+      - local_pdf
+      - translation_pdf
+  - type: table
+    name: 有开源代码
+    filters:
+      and:
+        - code_url != null
+        - code_url != ""
+    order:
+      - file.name
+      - research_direction
+      - code_url
+
