@@ -1,26 +1,12 @@
 {
   "collapse-filter": false,
-  "search": "-path:\"每日追踪\" -path:\"模板\" -path:\"附件\" -path:\"00 系统\" -file:AGENTS -file:手机快速记录",
+  "search": "-path:\"模板\" -path:\"附件\" -path:\"00 系统\" -file:AGENTS",
   "showTags": false,
   "showAttachments": false,
   "hideUnresolved": true,
   "showOrphans": false,
   "collapse-color-groups": true,
   "colorGroups": [
-    {
-      "query": "path:\"知识地图\"",
-      "color": {
-        "a": 1,
-        "rgb": 16763904
-      }
-    },
-    {
-      "query": "path:\"概念库\"",
-      "color": {
-        "a": 1,
-        "rgb": 5763719
-      }
-    },
     {
       "query": "path:\"论文库\"",
       "color": {
@@ -29,24 +15,10 @@
       }
     },
     {
-      "query": "path:\"专题学习\" OR path:\"DIULENS论文学习\"",
-      "color": {
-        "a": 1,
-        "rgb": 16744272
-      }
-    },
-    {
       "query": "path:\"项目\"",
       "color": {
         "a": 1,
         "rgb": 15158332
-      }
-    },
-    {
-      "query": "path:\"输出\"",
-      "color": {
-        "a": 1,
-        "rgb": 10837879
       }
     }
   ],
@@ -63,3 +35,4 @@
   "scale": 0.7132754626224383,
   "close": true
 }
+
